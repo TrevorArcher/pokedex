@@ -1,4 +1,5 @@
 # pokedex
 
-Credits
+**Credits**
+
 Sprites: https://github.com/msikma/pokesprite
