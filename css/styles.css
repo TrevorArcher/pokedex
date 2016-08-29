@@ -1,4 +1,7 @@
-
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
 
 h1{
   text-align: center;
@@ -109,19 +112,44 @@ h1{
   background-color: #ee99ac;
 }
 
-/*---------- Type selection menu ----------*/
-
-.info-card {
-  width: 12.5rem;
-  height: 17.5rem;
-  border: 1px solid black;
+/*---------- Search results ----------*/
+.search-results {
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
 }
 
+.info-img {
+  margin: 1rem auto;
+}
+
+.info-name {
+  color: #333;
+}
+
+.info-card {
+  position: relative;
+  display: inline-block;
+  width: 10rem;
+  height: 13rem;
+  background-color: #efefef;
+  text-align: center;
+  margin: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.type-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
 .info-type {
-  width: 4rem;
-  height: 2rem;
-  margin: 0 auto;
+  width: 3.5rem;
+  height: 1.5rem;
   font-size: 0.75rem;
-  line-height: 0.75rem;
+  line-height: 1.5rem;
+  border-radius: 2px;
+  margin: 0.75rem auto;
 }
