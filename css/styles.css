@@ -1,3 +1,127 @@
-* {
-  box-sizing: border-box;
+
+
+h1{
+  text-align: center;
+}
+
+/*---------- Type selection menu ----------*/
+
+#type-select {
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.type {
+  display: inline-block;
+  width: 6rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  max-width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.7rem;
+  border-radius: 3px;
+  transition-duration: 0.2s;
+}
+
+.type:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 20px #ccc;
+  transition-duration: 0.2s;
+}
+
+.normal,
+.fire,
+.water,
+.grass,
+.electric,
+.ice,
+.fighting,
+.poison,
+.ground,
+.rock,
+.flying,
+.bug,
+.psychic,
+.ghost,
+.dragon,
+.dark,
+.steel,
+.fairy {
+  color: #fff;
+  border: none;
+}
+
+.normal {
+  background-color: #a8a878;
+}
+.fire {
+  background-color: #f08030;
+}
+.water {
+  background-color: #6890f0;
+}
+.grass {
+  background-color: #78c850;
+}
+.electric {
+  background-color: #f8d030;
+}
+.ice {
+  background-color: #98d8d8;
+}
+.fighting {
+  background-color: #c03028;
+}
+.poison {
+  background-color: #a040a0;
+}
+.ground {
+  background-color: #e0c068;
+}
+.rock {
+  background-color: #b8a038;
+}
+.flying {
+  background-color: #a890f0;
+}
+.bug {
+  background-color: #a8b820;
+}
+.psychic {
+  background-color: #f85888;
+}
+.ghost {
+  background-color: #705898;
+}
+.dragon {
+  background-color: #7038f8 ;
+}
+.dark {
+  background-color: #705848;
+}
+.steel {
+  background-color: #b8b8d0;
+}
+.fairy {
+  background-color: #ee99ac;
+}
+
+/*---------- Type selection menu ----------*/
+
+.info-card {
+  width: 12.5rem;
+  height: 17.5rem;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.info-type {
+  width: 4rem;
+  height: 2rem;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
 }
