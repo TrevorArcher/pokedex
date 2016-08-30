@@ -11,33 +11,41 @@
     <h1>Pok&eacute;dex</h1>
   </header>
   <main>
-    <div id="type-select">
-      <button type="button" value="normal" class="type normal">Normal</button>
-      <button type="button" value="fire" class="type fire">Fire</button>
-      <button type="button" value="water" class="type water">Water</button>
-      <button type="button" value="grass" class="type grass">Grass</button>
-      <button type="button" value="electric" class="type electric">Electric</button>
-      <button type="button" value="ice" class="type ice">Ice</button>
-      <button type="button" value="fighting" class="type fighting">Fighting</button>
-      <button type="button" value="poison" class="type poison">Poison</button>
-      <button type="button" value="ground" class="type ground">Ground</button>
-      <button type="button" value="rock" class="type rock">Rock</button>
-      <button type="button" value="flying" class="type flying">Flying</button>
-      <button type="button" value="bug" class="type bug">Bug</button>
-      <button type="button" value="psychic" class="type psychic">Psychic</button>
-      <button type="button" value="ghost" class="type ghost">Ghost</button>
-      <button type="button" value="dragon" class="type dragon">Dragon</button>
-      <button type="button" value="dark" class="type dark">Dark</button>
-      <button type="button" value="steel" class="type steel">Steel</button>
-      <button type="button" value="fairy" class="type fairy">Fairy</button>
-    </div>
+    <form method="get">
+      <fieldset>
+        <div id="type-menu">
+          <button type="button" value="normal" class="type normal">Normal</button>
+          <button type="button" value="fire" class="type fire">Fire</button>
+          <button type="button" value="water" class="type water">Water</button>
+          <button type="button" value="grass" class="type grass">Grass</button>
+          <button type="button" value="electric" class="type electric">Electric</button>
+          <button type="button" value="ice" class="type ice">Ice</button>
+          <button type="button" value="fighting" class="type fighting">Fighting</button>
+          <button type="button" value="poison" class="type poison">Poison</button>
+          <button type="button" value="ground" class="type ground">Ground</button>
+          <button type="button" value="rock" class="type rock">Rock</button>
+          <button type="button" value="flying" class="type flying">Flying</button>
+          <button type="button" value="bug" class="type bug">Bug</button>
+          <button type="button" value="psychic" class="type psychic">Psychic</button>
+          <button type="button" value="ghost" class="type ghost">Ghost</button>
+          <button type="button" value="dragon" class="type dragon">Dragon</button>
+          <button type="button" value="dark" class="type dark">Dark</button>
+          <button type="button" value="steel" class="type steel">Steel</button>
+          <button type="button" value="fairy" class="type fairy">Fairy</button>
+        </div>
+        <div id="form-btns">
+          <button type="submit" value="submit" class="search-submit">Search</button>
+          <button type="reset" value="submit" class="search-reset">Reset</button>
+        </div>
+      </fieldset>
+    </form>
     <div class="search-results">
       <div class="info-card">
         <div class="info-img"><img src="https://placekitten.com/50/50"></div>
-        <div class="info-name"><p>#047 Fletchinder</p><div>
+        <div class="info-name"><p>#047 Parasect</p></div>
         <div class="type-container">
-          <div class="bug info-type"><p>Bug</p></div>
-          <div class="grass info-type"><p>Grass</p></div>
+          <div class="bug-select info-type"><p>Bug</p></div>
+          <div class="grass-select info-type"><p>Grass</p></div>
         </div>
       </div>
     </div>

@@ -7,9 +7,12 @@ h1{
   text-align: center;
 }
 
+fieldset {
+  border: none;
+}
 /*---------- Type selection menu ----------*/
 
-#type-select {
+#type-menu {
   width: 80%;
   max-width: 700px;
   text-align: center;
@@ -29,10 +32,11 @@ h1{
   transition-duration: 0.2s;
 }
 
-.type:hover {
+.type-select {
   transform: translateY(-5px);
-  box-shadow: 10px 10px 20px #ccc;
+  box-shadow: 10px 10px 20px #888;
   transition-duration: 0.2s;
+
 }
 
 .normal,
@@ -52,63 +56,135 @@ h1{
 .dragon,
 .dark,
 .steel,
-.fairy {
+.fairy,
+.normal-select,
+.fire-select,
+.water-select,
+.grass-select,
+.electric-select,
+.ice-select,
+.fighting-select,
+.poison-select,
+.ground-select,
+.rock-select,
+.flying-select,
+.bug-select,
+.psychic-select,
+.ghost-select,
+.dragon-select,
+.dark-select,
+.steel-select,
+.fairy-select {
   color: #fff;
   border: none;
 }
 
 .normal {
+  background-color: #6d6d4e;
+}
+.normal-select {
   background-color: #a8a878;
 }
 .fire {
+  background-color: #9c531f;
+}
+.fire-select {
   background-color: #f08030;
 }
 .water {
+  background-color: #445e9c;
+}
+.water-select {
   background-color: #6890f0;
 }
 .grass {
+  background-color: #4e8234;
+}
+.grass-select {
   background-color: #78c850;
 }
 .electric {
+  background-color: #a1871f;
+}
+.electric-select {
   background-color: #f8d030;
 }
 .ice {
-  background-color: #98d8d8;
+  background-color: #638D8D;
+}
+.ice-select {
+    background-color: #98d8d8;
 }
 .fighting {
+  background-color: #7d1f1a;
+}
+.fighting-select {
   background-color: #c03028;
 }
 .poison {
+  background-color: #682a68;
+}
+.poison-select {
   background-color: #a040a0;
 }
 .ground {
+  background-color: #927d44;
+}
+.ground-select {
   background-color: #e0c068;
 }
 .rock {
+  background-color: #786824;
+}
+.rock-select {
   background-color: #b8a038;
 }
 .flying {
+  background-color: #6d5e9c;
+}
+.flying-select {
   background-color: #a890f0;
 }
 .bug {
+  background-color: #6d7815;
+}
+.bug-select {
   background-color: #a8b820;
 }
 .psychic {
+  background-color: #a13959;
+}
+.psychic-select {
   background-color: #f85888;
 }
 .ghost {
+  background-color: #493963;
+}
+.ghost-select {
   background-color: #705898;
 }
 .dragon {
-  background-color: #7038f8 ;
+  background-color: #4924a1;
+}
+.dragon-select {
+  background-color: #7038f8;
 }
 .dark {
+  background-color: #49392f;
+}
+.dark-select {
   background-color: #705848;
 }
 .steel {
+  background-color: #787887;
+}
+.steel-select {
   background-color: #b8b8d0;
 }
 .fairy {
+  background-color: #9b6470;
+}
+.fairy-select {
   background-color: #ee99ac;
 }
 
@@ -124,7 +200,7 @@ h1{
 }
 
 .info-name {
-  color: #333;
+  color: #4f4f5f;
 }
 
 .info-card {
