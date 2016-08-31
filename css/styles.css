@@ -196,10 +196,11 @@ fieldset {
 }
 
 .info-img {
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 .info-name {
+  display: block;
   color: #4f4f5f;
 }
 
@@ -210,6 +211,7 @@ fieldset {
   height: 13rem;
   background-color: #efefef;
   text-align: center;
+  cursor: pointer;
   margin: 1rem;
   border: 1px solid #ddd;
   border-radius: 3px;
@@ -222,10 +224,16 @@ fieldset {
 }
 
 .info-type {
+  display: inline-block;
   width: 3.5rem;
   height: 1.5rem;
   font-size: 0.75rem;
+  text-transform: capitalize;
   line-height: 1.5rem;
   border-radius: 2px;
-  margin: 0.75rem auto;
+  margin: 0.5rem;
+}
+
+.info-type p{
+  margin: 0;
 }

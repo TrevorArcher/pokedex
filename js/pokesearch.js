@@ -20,20 +20,37 @@ $('.search-reset').on('click', function(){
   }
 });
 
-// var genOne = function() {
-//   $.ajax({
-//     type: 'GET',
-//     url: 'https://pokeapi.co/api/v2/generation/1/',
-//     dataType: 'json',
-//     success: function (result){
-//       console.log(result);
-//       for (var i = 0 ; i < result.pokemon_species.length ; i++) {
-//         var pName = result.pokemon_species[i].name;
-//         $results.append(($('<div class="info-card">')).append(($('<div class="info-name">')).append($('<p>').text(pName))));
-//       }
-//     }
-//   });
-// };
+var genOne = function() {
+  $.ajax({
+    type: 'GET',
+    url: 'json/pokemon.json',
+    dataType: 'json',
+    success: function(result){
+      $results.empty();
+      $results.hide();
+      console.log(result);
+      // for(var i = 0 ; i < result.pokemon.length ; i++) {
+      //   var nextP = result.pokemon[i],
+      //       pName = nextP.name,
+      //       $cardDiv = $('<div class="info-card">'),
+      //       $nameDiv = $('<div class="info-name">'),
+      //       $imgDiv = $('<div class="info-img">'),
+      //       $typeDiv = $('<div class="type-container">');
+      //   $cardDiv.append(($imgDiv).append($('<img src=' + result.pokemon[i].sprites + '>')));
+      //   $cardDiv.append(($nameDiv).append($('<p>').text(pName)));
+      //   $cardDiv.append(($typeDiv));
+      //   for (var j = 0 ; j < nextP.types.length ; j++) {
+      //     $typeDiv.append($('<div class="info-type ' + nextP.types[j] + '-select">').append($('<p>').text(nextP.types[j])));
+      //   }
+      //   $results.append($cardDiv);
+      //   $results.fadeIn();
+      // }
+    }
+  });
+};
+
+genOne();
+
 
 
 // $('.search-submit').on('click', function(event){

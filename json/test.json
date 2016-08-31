@@ -1,0 +1,13 @@
+{ "pokemon":[
+    { "id":1,
+      "name":"bulbasaur",
+      "types":["grass", "poison"],
+      "sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+    },
+    { "id":2,
+      "name":"ivysaur",
+      "types":["grass", "poison"],
+      "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+    }
+  ]
+}
