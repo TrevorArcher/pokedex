@@ -1,16 +1,41 @@
-var $results = $('.search-results');
-var $buttons = $('button');
-var pNameArr = [];
-var pTypeArr = [];
+var $results = $('.search-results'),
+    $buttons = $('button'),
+    pObj,
+    pNameArr = [],
+    pTypeArr = [];
+
+var genOne = function() {
+  $.ajax({
+    type: 'GET',
+    url: 'json/pokemon.json',
+    dataType: 'json',
+    success: function(result){
+      pObj = result;
+      console.log(pObj);
+    }
+  });
+}();
 
 $('.type').on('click', function(){
-  $(this).toggleClass(this.value);
-  $(this).toggleClass(this.value + '-select');
+  var thisType = this.value;
+  if (pTypeArr.includes(thisType) && ($(this).hasClass(thisType + '-select'))){
+      pTypeArr.splice(pTypeArr.indexOf(thisType),1);
+      console.log(pTypeArr);
+      console.log('type removed!');
+  } else {
+    pTypeArr.push(thisType);
+    console.log(pTypeArr);
+    console.log('type has been added!');
+  }
+  $(this).toggleClass(thisType);
+  $(this).toggleClass(thisType + '-select');
   $(this).toggleClass('type-select');
-  console.log(this.value);
+  console.log(thisType);
 });
 
 $('.search-reset').on('click', function(){
+  pTypeArr = [];
+  $results.empty();
   for (var i = 0 ; i < $buttons.length ; i++) {
     if ($($buttons[i]).hasClass('type-select')) {
       $($buttons[i]).addClass($buttons[i].value);
@@ -20,60 +45,30 @@ $('.search-reset').on('click', function(){
   }
 });
 
-var genOne = function() {
-  $.ajax({
-    type: 'GET',
-    url: 'json/pokemon.json',
-    dataType: 'json',
-    success: function(result){
-      $results.empty();
-      $results.hide();
-      console.log(result);
-      for(var i = 0 ; i < result.pokemon.length ; i++) {
-        var nextP = result.pokemon[i],
-            pName = nextP.name,
-            $cardDiv = $('<div class="info-card">'),
-            $nameDiv = $('<div class="info-name">'),
-            $imgDiv = $('<div class="info-img">'),
-            $typeDiv = $('<div class="type-container">');
-        $cardDiv.append(($imgDiv).append($('<img src=' + result.pokemon[i].sprites + '>')));
-        $cardDiv.append(($nameDiv).append($('<p>').text(pName)));
-        $cardDiv.append(($typeDiv));
-        for (var j = 0 ; j < nextP.types.length ; j++) {
-          $typeDiv.append($('<div class="info-type ' + nextP.types[j] + '-select">').append($('<p>').text(nextP.types[j])));
-        }
-        $results.append($cardDiv);
-        $results.fadeIn();
+$('.search-submit').on('click', function(event){
+  event.preventDefault();
+  $results.hide();
+  $results.empty();
+  for(var i = 0 ; i < pObj.pokemon.length ; i++) {
+    var nextP = pObj.pokemon[i],
+        pName = nextP.name,
+        $cardDiv = $('<div class="info-card">'),
+        $nameDiv = $('<div class="info-name">'),
+        $imgDiv = $('<div class="info-img">'),
+        $typeDiv = $('<div class="type-container">');
+    if ((pTypeArr.includes(nextP.types[0]) || pTypeArr.includes(nextP.types[1]))) {
+      $cardDiv.append(($imgDiv).append($('<img src=' + pObj.pokemon[i].sprites + '>')));
+      $cardDiv.append(($nameDiv).append($('<p>').text(pName)));
+      $cardDiv.append(($typeDiv));
+      for (var j = 0 ; j < nextP.types.length ; j++) {
+        $typeDiv.append($('<div class="info-type ' + nextP.types[j] + '-select">').append($('<p>').text(nextP.types[j])));
       }
+      $results.append($cardDiv);
     }
-  });
-};
+    $results.fadeIn();
+  }
+});
 
-genOne();
-
-
-
-// $('.search-submit').on('click', function(event){
-//   event.preventDefault();
-//   // var pType = $(this).text();
-//   // console.log(pType);
-//   for (var i = 0 ; i < $buttons.length ; i++) {
-//     var pType = $($buttons[i].value);
-//     $.ajax({
-//       type: 'GET',
-//       url: ('https://pokeapi.co/api/v2/type/' + pType.toLowerCase()),
-//       dataType: 'json',
-//       success: function(result){
-//         $results.empty();
-//         pNameArr = [];
-//         console.log(result);
-//         for (var i = 0 ; i < result.pokemon.length ; i++){
-//           var pName = result.pokemon[i].pokemon.name;
-//           pNameArr.push(pName);
-//           $results.append(($('<div class="info-card">')).append(($('<div class="info-name">')).append($('<p>').text(pName))));
-//         }
-//       }
-//       console.log(pNameArr);
-//     });
-//   }
-// });
+$('.search-results').on('click', '.info-card', function() {
+  $(this).toggleClass('more-info');
+});

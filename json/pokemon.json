@@ -353,7 +353,7 @@
     { "id":71,
       "name":"victreebel",
       "types":["grass","poison"],
-      "sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png"
+      "sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png"
     },
     { "id":72,
       "name":"tentacool",
