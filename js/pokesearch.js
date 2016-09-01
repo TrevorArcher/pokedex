@@ -29,22 +29,22 @@ var genOne = function() {
       $results.empty();
       $results.hide();
       console.log(result);
-      // for(var i = 0 ; i < result.pokemon.length ; i++) {
-      //   var nextP = result.pokemon[i],
-      //       pName = nextP.name,
-      //       $cardDiv = $('<div class="info-card">'),
-      //       $nameDiv = $('<div class="info-name">'),
-      //       $imgDiv = $('<div class="info-img">'),
-      //       $typeDiv = $('<div class="type-container">');
-      //   $cardDiv.append(($imgDiv).append($('<img src=' + result.pokemon[i].sprites + '>')));
-      //   $cardDiv.append(($nameDiv).append($('<p>').text(pName)));
-      //   $cardDiv.append(($typeDiv));
-      //   for (var j = 0 ; j < nextP.types.length ; j++) {
-      //     $typeDiv.append($('<div class="info-type ' + nextP.types[j] + '-select">').append($('<p>').text(nextP.types[j])));
-      //   }
-      //   $results.append($cardDiv);
-      //   $results.fadeIn();
-      // }
+      for(var i = 0 ; i < result.pokemon.length ; i++) {
+        var nextP = result.pokemon[i],
+            pName = nextP.name,
+            $cardDiv = $('<div class="info-card">'),
+            $nameDiv = $('<div class="info-name">'),
+            $imgDiv = $('<div class="info-img">'),
+            $typeDiv = $('<div class="type-container">');
+        $cardDiv.append(($imgDiv).append($('<img src=' + result.pokemon[i].sprites + '>')));
+        $cardDiv.append(($nameDiv).append($('<p>').text(pName)));
+        $cardDiv.append(($typeDiv));
+        for (var j = 0 ; j < nextP.types.length ; j++) {
+          $typeDiv.append($('<div class="info-type ' + nextP.types[j] + '-select">').append($('<p>').text(nextP.types[j])));
+        }
+        $results.append($cardDiv);
+        $results.fadeIn();
+      }
     }
   });
 };
