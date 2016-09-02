@@ -257,11 +257,16 @@ fieldset {
   margin: 0.5rem;
 }
 
-.info-type p{
+.info-type p {
   margin: 0;
 }
 
 .more-info {
-  transform: translate(-10rem,-10rem); /*check ease-in CSS */
-  transition-duration: 0.4s; /* look up which properties 'transition' applies to */
+  position: absolute;
+  animation: cardmove 0.4s;
+}
+
+@keyframes cardmove {
+    from {top: 0;}
+    to {top: 10vh; left: 10vh;} /* still needs a lot of tweaking */
 }
