@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -40,15 +41,23 @@
       </fieldset>
     </form>
     <div class="search-results">
-      <div class="info-card">
+      <!-- <div class="info-card">
         <div class="info-img"><img src="https://placekitten.com/50/50"></div>
         <div class="info-name"><p>#047 Parasect</p></div>
         <div class="type-container">
           <div class="bug-select info-type"><p>Bug</p></div>
           <div class="grass-select info-type"><p>Grass</p></div>
         </div>
-      </div>
+      </div> -->
     </div>
+    <span id="info-overlay">
+      <button type="button" class="close-overlay" value="X">X</button>
+      <h1 class="name-overlay">#047 Parasect</h1>
+      <div class="ht-wt">
+        <h3 class="ht">Height: 1.0 m</h3>
+        <h3 class="wt">Weight: 29.5 kg</h3>
+      </div>
+    </span>
   </main>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous">
   </script>

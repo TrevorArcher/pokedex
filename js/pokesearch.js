@@ -1,4 +1,5 @@
 var $results = $('.search-results'),
+    $infoOver = $('#info-overlay'),
     $buttons = $('button'),
     pObj,
     pNameArr = [],
@@ -71,4 +72,27 @@ $('.search-submit').on('click', function(event){
 
 $('.search-results').on('click', '.info-card', function() {
   $(this).toggleClass('more-info');
+  if ($('#info-overlay').css('display') == 'none'){
+    $('#info-overlay').css('display', 'inline');
+    // $('body').css('overflow','hidden'); Not sure if I care enough about disabling scrolling
+  } else {
+    $('#info-overlay').css('display', 'none');
+    // $('body').css('overflow','initial');
+  }
+  // $infoOver.hide();
+  // $infoOver.empty();
+  //insert ajax call to pokeapi
+
+  // $infoOver.append(($imgDiv));
+});
+
+$('.close-overlay').on('click', function() {
+  $('.info-card').removeClass('more-info');
+  if ($('#info-overlay').css('display') == 'none'){
+    $('#info-overlay').css('display', 'inline');
+    // $('body').css('overflow','hidden'); Not sure if I care enough about disabling scrolling
+  } else {
+    $('#info-overlay').css('display', 'none');
+    // $('body').css('overflow','initial');
+  }
 });
