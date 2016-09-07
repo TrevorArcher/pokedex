@@ -2,4 +2,4 @@
 
 **Credits**
 
-Sprites: https://github.com/msikma/pokesprite
+Data and Sprites: https://pokeapi.co/

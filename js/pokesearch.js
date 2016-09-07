@@ -71,28 +71,55 @@ $('.search-submit').on('click', function(event){
 });
 
 $('.search-results').on('click', '.info-card', function() {
+  var $infoText = $('.info-text'),
+      pId = '',
+      pName = '',
+      pHt = '',
+      pWt = '';
+      pStats = {
+        'speed': 0,
+        'spcDef': 0,
+        'spcAtk': 0,
+        'def': 0,
+        'atk': 0,
+        'hp': 0
+      };
   $(this).toggleClass('more-info');
-  if ($('#info-overlay').css('display') == 'none'){
-    $('#info-overlay').css('display', 'inline');
-    // $('body').css('overflow','hidden'); Not sure if I care enough about disabling scrolling
-  } else {
-    $('#info-overlay').css('display', 'none');
-    // $('body').css('overflow','initial');
+  $('#info-overlay').fadeToggle();
+  $infoText.empty();
+  if ($(this).hasClass('more-info')){
+    $.ajax({
+      type: 'GET',
+      url: 'https://pokeapi.co/api/v2/pokemon/' + $(this).find('p:first').text(),
+      dataType: 'json',
+      success: function(result){
+        pId = result.id;
+        pName = result.name;
+        pHt = (result.height) / 10;
+        pWt = (result.weight) / 10;
+        pStats.speed = result.stats[0].base_stat;
+        pStats.spcDef = result.stats[1].base_stat;
+        pStats.spcAtk = result.stats[2].base_stat;
+        pStats.def = result.stats[3].base_stat;
+        pStats.atk = result.stats[4].base_stat;
+        pStats.hp = result.stats[5].base_stat;
+        console.log(result);
+        if (pId.toString().length == 1) {
+          $infoText.append($('<h1 class="name-overlay">').text('#00' + pId + ' ' + pName));
+        } else if (pId.toString().length == 2) {
+          $infoText.append($('<h1 class="name-overlay">').text('#0' + pId + ' ' + pName));
+        } else {
+          $infoText.append($('<h1 class="name-overlay">').text('#' + pId + ' ' + pName));
+        }
+      }
+    });
   }
   // $infoOver.hide();
   // $infoOver.empty();
-  //insert ajax call to pokeapi
-
   // $infoOver.append(($imgDiv));
 });
 
 $('.close-overlay').on('click', function() {
   $('.info-card').removeClass('more-info');
-  if ($('#info-overlay').css('display') == 'none'){
-    $('#info-overlay').css('display', 'inline');
-    // $('body').css('overflow','hidden'); Not sure if I care enough about disabling scrolling
-  } else {
-    $('#info-overlay').css('display', 'none');
-    // $('body').css('overflow','initial');
-  }
+  $('#info-overlay').fadeToggle();
 });
