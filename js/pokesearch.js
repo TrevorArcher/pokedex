@@ -53,7 +53,7 @@ $('.search-submit').on('click', function(event){
   for(var i = 0 ; i < pObj.pokemon.length ; i++) {
     var nextP = pObj.pokemon[i],
         pName = nextP.name,
-        $cardDiv = $('<div class="info-card">'),
+        $cardDiv = $('<div class="info-card" value=' + nextP.id + '>'),
         $nameDiv = $('<div class="info-name">'),
         $imgDiv = $('<div class="info-img">'),
         $typeDiv = $('<div class="type-container">');
@@ -83,35 +83,34 @@ $('.search-results').on('click', '.info-card', function() {
         'def': 0,
         'atk': 0,
         'hp': 0
-      };
+      },
+      thisId = this.getAttribute('value');
   $(this).toggleClass('more-info');
   $('#info-overlay').fadeToggle();
   $infoText.empty();
   if ($(this).hasClass('more-info')){
     $.ajax({
       type: 'GET',
-      url: '../scrapes/pokemon/1.json',
+      url: 'scrapes/pokemon/'+ thisId +'.json',
       dataType: 'json',
       success: function(result){
-        // pId = result.id;
-        // pName = result.name;
-        // pHt = (result.height) / 10;
-        // pWt = (result.weight) / 10;
-        // pStats.speed = result.stats[0].base_stat;
-        // pStats.spcDef = result.stats[1].base_stat;
-        // pStats.spcAtk = result.stats[2].base_stat;
-        // pStats.def = result.stats[3].base_stat;
-        // pStats.atk = result.stats[4].base_stat;
-        // pStats.hp = result.stats[5].base_stat;
-        debugger;
         console.log(result);
-        // if (pId.toString().length == 1) {
-        //   $infoText.append($('<h1 class="name-overlay">').text('#00' + pId + ' ' + pName));
-        // } else if (pId.toString().length == 2) {
-        //   $infoText.append($('<h1 class="name-overlay">').text('#0' + pId + ' ' + pName));
-        // } else {
-        //   $infoText.append($('<h1 class="name-overlay">').text('#' + pId + ' ' + pName));
-        // }
+        pId = result.id;
+        pName = result.name;
+        pHt = (result.height) / 10;
+        pWt = (result.weight) / 10;
+        pStats.speed = result.stats[0].base_stat;
+        pStats.spcDef = result.stats[1].base_stat;
+        pStats.spcAtk = result.stats[2].base_stat;
+        pStats.def = result.stats[3].base_stat;
+        pStats.atk = result.stats[4].base_stat;
+        if (pId.toString().length == 1) {
+          $infoText.append($('<h1 class="name-overlay">').text('#00' + pId + ' ' + pName));
+        } else if (pId.toString().length == 2) {
+          $infoText.append($('<h1 class="name-overlay">').text('#0' + pId + ' ' + pName));
+        } else {
+          $infoText.append($('<h1 class="name-overlay">').text('#' + pId + ' ' + pName));
+        }
       }
     });
   }
