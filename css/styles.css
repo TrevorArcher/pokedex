@@ -262,6 +262,8 @@ fieldset {
   margin: 0;
 }
 
+/*--------- More information overlay styles ---------*/
+
 #info-overlay {
   display: none;
   position: fixed;
@@ -272,6 +274,76 @@ fieldset {
   width: 100%;
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.info-text {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: 0;
+
+}
+.name-overlay {
+  width: 100%;
+  text-align: center;
+  font-family: 'Poiret One', Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  padding-top: 10vh;
+  margin: 0 auto;
+}
+
+.ht-wt {
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 2rem auto;
+}
+
+.ht,
+.wt {
+  display: inline-block;
+  font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin: 0 5%;
+}
+
+.stat-container {
+  max-width: 30rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.stat {
+  display: inline-block;
+  width: 7rem;
+  height: 2.8rem;
+  line-height: 1.25rem;
+  max-width: 100%;
+  font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 1.25rem;
+  margin: 1rem;
+  border-radius: 3px;
+}
+
+.hp {
+background-color: #FF5959;
+}
+.atk {
+background-color: #F5AC78;
+}
+.def {
+background-color: #FAE078;
+}
+.spcAtk {
+background-color: #9DB7F5;
+}
+.spcDef {
+background-color: #A7DB8D;
+}
+.speed {
+  background-color: #FA92B2;
 }
 
 .close-overlay {
@@ -289,41 +361,10 @@ fieldset {
   border-radius: 2px;
 }
 
-.name-overlay {
-  position: fixed;
-  top: 10vh;
-  width: 100%;
-  text-align: center;
-  font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
-  color: #fff;
-  margin: 0 auto;
-}
-
-.ht-wt {
-  position: fixed;
-  top: 20vh;
-  text-align: center;
-  width: 100%;
-}
-
-.ht,
-.wt {
-  display: inline-block;
-  font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
-  color: #fff;
-  margin: 0 5%;
-}
-
 .more-info {
   position: fixed;
   top: 10vh;
   left: 10vh;
   z-index: 1;
   transition-duration: 0.4s;
-  /*animation: cardmove 0.4s;*/
-}
-
-@keyframes cardmove {
-    from {z-index: 1;}
-    to {top: 10vh; left: 10vh;} /* still needs a lot of tweaking */
 }
