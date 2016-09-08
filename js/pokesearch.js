@@ -71,7 +71,10 @@ $('.search-submit').on('click', function(event){
 });
 
 $('.search-results').on('click', '.info-card', function() {
-  var $infoText = $('.info-text'),
+  var $infoText = $('<div class="info-text">'),
+      $htWt = $('<div class="ht-wt">'),
+      $ht = $('<h3 class="ht"></h3>'),
+      $wt = $('<h3 class="wt"></h3>'),
       pId = '',
       pName = '',
       pHt = '',
@@ -86,8 +89,7 @@ $('.search-results').on('click', '.info-card', function() {
       },
       thisId = this.getAttribute('value');
   $(this).toggleClass('more-info');
-  $('#info-overlay').fadeToggle();
-  $infoText.empty();
+  $infoOver.fadeToggle();
   if ($(this).hasClass('more-info')){
     $.ajax({
       type: 'GET',
@@ -104,6 +106,7 @@ $('.search-results').on('click', '.info-card', function() {
         pStats.spcAtk = result.stats[2].base_stat;
         pStats.def = result.stats[3].base_stat;
         pStats.atk = result.stats[4].base_stat;
+        $infoOver.append($infoText);
         if (pId.toString().length == 1) {
           $infoText.append($('<h1 class="name-overlay">').text('#00' + pId + ' ' + pName));
         } else if (pId.toString().length == 2) {
@@ -111,6 +114,9 @@ $('.search-results').on('click', '.info-card', function() {
         } else {
           $infoText.append($('<h1 class="name-overlay">').text('#' + pId + ' ' + pName));
         }
+        $infoText.append($htWt);
+        $htWt.append($ht.text('Height: ' + pHt + 'm'));
+        $htWt.append($wt.text('Weight: ' + pWt + 'kg'));
       }
     });
   }
@@ -121,5 +127,5 @@ $('.search-results').on('click', '.info-card', function() {
 
 $('.close-overlay').on('click', function() {
   $('.info-card').removeClass('more-info');
-  $('#info-overlay').fadeToggle();
+  $infoOver.fadeToggle();
 });
