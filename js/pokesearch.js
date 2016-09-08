@@ -90,27 +90,28 @@ $('.search-results').on('click', '.info-card', function() {
   if ($(this).hasClass('more-info')){
     $.ajax({
       type: 'GET',
-      url: 'https://pokeapi.co/api/v2/pokemon/' + $(this).find('p:first').text(),
+      url: '../scrapes/pokemon/1.json',
       dataType: 'json',
       success: function(result){
-        pId = result.id;
-        pName = result.name;
-        pHt = (result.height) / 10;
-        pWt = (result.weight) / 10;
-        pStats.speed = result.stats[0].base_stat;
-        pStats.spcDef = result.stats[1].base_stat;
-        pStats.spcAtk = result.stats[2].base_stat;
-        pStats.def = result.stats[3].base_stat;
-        pStats.atk = result.stats[4].base_stat;
-        pStats.hp = result.stats[5].base_stat;
+        // pId = result.id;
+        // pName = result.name;
+        // pHt = (result.height) / 10;
+        // pWt = (result.weight) / 10;
+        // pStats.speed = result.stats[0].base_stat;
+        // pStats.spcDef = result.stats[1].base_stat;
+        // pStats.spcAtk = result.stats[2].base_stat;
+        // pStats.def = result.stats[3].base_stat;
+        // pStats.atk = result.stats[4].base_stat;
+        // pStats.hp = result.stats[5].base_stat;
+        debugger;
         console.log(result);
-        if (pId.toString().length == 1) {
-          $infoText.append($('<h1 class="name-overlay">').text('#00' + pId + ' ' + pName));
-        } else if (pId.toString().length == 2) {
-          $infoText.append($('<h1 class="name-overlay">').text('#0' + pId + ' ' + pName));
-        } else {
-          $infoText.append($('<h1 class="name-overlay">').text('#' + pId + ' ' + pName));
-        }
+        // if (pId.toString().length == 1) {
+        //   $infoText.append($('<h1 class="name-overlay">').text('#00' + pId + ' ' + pName));
+        // } else if (pId.toString().length == 2) {
+        //   $infoText.append($('<h1 class="name-overlay">').text('#0' + pId + ' ' + pName));
+        // } else {
+        //   $infoText.append($('<h1 class="name-overlay">').text('#' + pId + ' ' + pName));
+        // }
       }
     });
   }
