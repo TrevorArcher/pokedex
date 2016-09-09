@@ -79,7 +79,7 @@ $('.search-results').on('click', '.info-card', function() {
       pId = '',
       pName = '',
       pHt = '',
-      pWt = '';
+      pWt = '',
       pStats = {
         'hp': 0,
         'atk': 0,
