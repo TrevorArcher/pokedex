@@ -1,19 +1,26 @@
+var pokeArr = [];
 
-function pokemon(id, name, types, sprites) {
-  $.ajax ({
-    type: 'get',
-    url: 'pokeapi.co/api/v2/pokemon/' + this.id + '/',
-    dataType: 'json',
-    success: function(result){
-      console.log(result);
-    }
-  });
-  this.id = result.id;
-  this.name = result.name;
-  this.types = result.types;
-  this.sprites = result.sprites;
+function soBasic() {
+  for (var i = 1 ; i < 10  ; i++) {
+    $.ajax ({
+      type: 'GET',
+      url: 'scrapes/pokemon/'+ i +'.json',
+      dataType: 'json',
+      success: function(result) {
+        var pokeNew = {
+        id : result.id,
+        name : result.name,
+        types : result.types,
+        sprites : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + result.id + ".png"
+      };
+        pokeArr.push(pokeNew);
+      }
+    });
+  }
+  console.log(pokeArr);
+  document.write(pokeArr);
 }
 
-for (var i = 1 ; i < 5 ; i++) {
-  new pokemon()
-}
+soBasic();
+
+// 721
