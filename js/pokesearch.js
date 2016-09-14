@@ -47,7 +47,6 @@ $('.search-reset').on('click', function(){
 });
 
 $('.search-submit').on('click', function(event){
-  event.preventDefault();
   $results.hide();
   $results.empty();
 
