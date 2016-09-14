@@ -33,7 +33,7 @@ Request.prototype.call = function() {
   req.end();
 };
 
-
-for (var i = 452 ; i < 494 ; i++) {
-  new Request(i).call();
+var herpArr = [251,721,301,351]
+for (var i = 0 ; i < herpArr.length ; i++) {
+  new Request(herpArr[i]).call();
 }
