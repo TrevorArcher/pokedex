@@ -50,20 +50,25 @@ $('.search-submit').on('click', function(event){
   event.preventDefault();
   $results.hide();
   $results.empty();
+
   for(var i = 0 ; i < pObj.pokemon.length ; i++) {
     var nextP = pObj.pokemon[i],
-        pName = nextP.name,
-        $cardDiv = $('<div class="info-card" value=' + nextP.id + '>'),
-        $nameDiv = $('<div class="info-name">'),
-        $imgDiv = $('<div class="info-img">'),
-        $typeDiv = $('<div class="type-container">');
+    pName = nextP.name,
+    $cardDiv = $('<div class="info-card" value=' + nextP.id + '>'),
+    $nameDiv = $('<div class="info-name">'),
+    $imgDiv = $('<div class="info-img">'),
+    $typeDiv = $('<div class="type-container">');
     if ((pTypeArr.includes(nextP.types[0]) || pTypeArr.includes(nextP.types[1]))) {
-      $cardDiv.append(($imgDiv).append($('<img src=' + pObj.pokemon[i].sprites + '>')));
-      $cardDiv.append(($nameDiv).append($('<p>').text(pName)));
-      $cardDiv.append(($typeDiv));
+      $imgDiv.append($('<img src=' + nextP.sprites + '>'));
+      $nameDiv.append($('<p>').text(pName));
+      $cardDiv.append($imgDiv);
+      $cardDiv.append($nameDiv);
       for (var j = 0 ; j < nextP.types.length ; j++) {
-        $typeDiv.append($('<div class="info-type ' + nextP.types[j] + '-select">').append($('<p>').text(nextP.types[j])));
+        var $type = $('<div class="info-type ' + nextP.types[j] + '-select">');
+        $type.append($('<p>').text(nextP.types[j]));
+        $typeDiv.append($type);
       }
+      $cardDiv.append(($typeDiv));
       $results.append($cardDiv);
     }
     $results.fadeIn();

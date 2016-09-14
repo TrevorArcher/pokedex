@@ -242,7 +242,7 @@
 
 {"id":121,"name":"starmie","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png","types":["water","psychic"]},
 
-{"id":122,"name":"mr-mime","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png","types":["psychic","fairy"]},
+{"id":122,"name":"mr. mime","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png","types":["psychic","fairy"]},
 
 {"id":123,"name":"scyther","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png","types":["bug","flying"]},
 
@@ -770,7 +770,7 @@
 
 {"id":385,"name":"jirachi","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/385.png","types":["steel","psychic"]},
 
-{"id":386,"name":"deoxys-normal","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/386.png","types":["psychic"]},
+{"id":386,"name":"deoxys","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/386.png","types":["psychic"]},
 
 {"id":387,"name":"turtwig","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/387.png","types":["grass"]},
 
@@ -824,7 +824,7 @@
 
 {"id":412,"name":"burmy","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/412.png","types":["bug"]},
 
-{"id":413,"name":"wormadam-plant","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png","types":["bug","grass"]},
+{"id":413,"name":"wormadam","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png","types":["bug","grass"]},
 
 {"id":414,"name":"mothim","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/414.png","types":["bug","flying"]},
 
@@ -876,7 +876,7 @@
 
 {"id":438,"name":"bonsly","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/438.png","types":["rock"]},
 
-{"id":439,"name":"mime-jr","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/439.png","types":["psychic","fairy"]},
+{"id":439,"name":"mime jr.","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/439.png","types":["psychic","fairy"]},
 
 {"id":440,"name":"happiny","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/440.png","types":["normal"]},
 
@@ -972,7 +972,7 @@
 
 {"id":486,"name":"regigigas","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/486.png","types":["normal"]},
 
-{"id":487,"name":"giratina-altered","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png","types":["ghost","dragon"]},
+{"id":487,"name":"giratina","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png","types":["ghost","dragon"]},
 
 {"id":488,"name":"cresselia","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/488.png","types":["psychic"]},
 
@@ -982,7 +982,7 @@
 
 {"id":491,"name":"darkrai","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/491.png","types":["dark"]},
 
-{"id":492,"name":"shaymin-land","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/492.png","types":["grass"]},
+{"id":492,"name":"shaymin","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/492.png","types":["grass"]},
 
 {"id":493,"name":"arceus","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png","types":["normal"]},
 
@@ -1098,7 +1098,7 @@
 
 {"id":549,"name":"lilligant","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/549.png","types":["grass"]},
 
-{"id":550,"name":"basculin-red-striped","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/550.png","types":["water"]},
+{"id":550,"name":"basculin","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/550.png","types":["water"]},
 
 {"id":551,"name":"sandile","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/551.png","types":["ground","dark"]},
 
@@ -1108,7 +1108,7 @@
 
 {"id":554,"name":"darumaka","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554.png","types":["fire"]},
 
-{"id":555,"name":"darmanitan-standard","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/555.png","types":["fire"]},
+{"id":555,"name":"darmanitan","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/555.png","types":["fire"]},
 
 {"id":556,"name":"maractus","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/556.png","types":["grass"]},
 
@@ -1280,21 +1280,21 @@
 
 {"id":640,"name":"virizion","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/640.png","types":["grass","fighting"]},
 
-{"id":641,"name":"tornadus-incarnate","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png","types":["flying"]},
+{"id":641,"name":"tornadus","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png","types":["flying"]},
 
-{"id":642,"name":"thundurus-incarnate","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/642.png","types":["electric","flying"]},
+{"id":642,"name":"thundurus","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/642.png","types":["electric","flying"]},
 
 {"id":643,"name":"reshiram","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/643.png","types":["dragon","fire"]},
 
 {"id":644,"name":"zekrom","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/644.png","types":["dragon","electric"]},
 
-{"id":645,"name":"landorus-incarnate","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/645.png","types":["ground","flying"]},
+{"id":645,"name":"landorus","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/645.png","types":["ground","flying"]},
 
 {"id":646,"name":"kyurem","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/646.png","types":["dragon","ice"]},
 
-{"id":647,"name":"keldeo-ordinary","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/647.png","types":["water","fighting"]},
+{"id":647,"name":"keldeo","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/647.png","types":["water","fighting"]},
 
-{"id":648,"name":"meloetta-aria","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/648.png","types":["normal","psychic"]},
+{"id":648,"name":"meloetta","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/648.png","types":["normal","psychic"]},
 
 {"id":649,"name":"genesect","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/649.png","types":["bug","steel"]},
 
@@ -1354,13 +1354,13 @@
 
 {"id":677,"name":"espurr","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/677.png","types":["psychic"]},
 
-{"id":678,"name":"meowstic-male","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png","types":["psychic"]},
+{"id":678,"name":"meowstic","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png","types":["psychic"]},
 
 {"id":679,"name":"honedge","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/679.png","types":["steel","ghost"]},
 
 {"id":680,"name":"doublade","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/680.png","types":["steel","ghost"]},
 
-{"id":681,"name":"aegislash-shield","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png","types":["steel","ghost"]},
+{"id":681,"name":"aegislash","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png","types":["steel","ghost"]},
 
 {"id":682,"name":"spritzee","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/682.png","types":["fairy"]},
 
@@ -1418,9 +1418,9 @@
 
 {"id":709,"name":"trevenant","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/709.png","types":["ghost","grass"]},
 
-{"id":710,"name":"pumpkaboo-average","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/710.png","types":["ghost","grass"]},
+{"id":710,"name":"pumpkaboo","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/710.png","types":["ghost","grass"]},
 
-{"id":711,"name":"gourgeist-average","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/711.png","types":["ghost","grass"]},
+{"id":711,"name":"gourgeist","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/711.png","types":["ghost","grass"]},
 
 {"id":712,"name":"bergmite","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/712.png","types":["ice"]},
 
