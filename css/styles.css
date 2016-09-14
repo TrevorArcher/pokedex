@@ -286,7 +286,7 @@ fieldset {
 .name-overlay {
   width: 100%;
   text-align: center;
-  font-family: 'Poiret One', Helvetica, Arial, sans-serif;
+  font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
   font-size: 3rem;
   color: #fff;
   padding-top: 10vh;
@@ -303,7 +303,7 @@ fieldset {
 .ht,
 .wt {
   display: inline-block;
-  font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
+  font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;;
   color: #fff;
   margin: 0 5%;
 }
@@ -320,7 +320,7 @@ fieldset {
   height: 2.8rem;
   line-height: 1.25rem;
   max-width: 100%;
-  font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;
+  font-family: 'Slabo 27px', Helvetica, Arial, sans-serif;;
   color: #333;
   font-size: 1.25rem;
   margin: 1rem;
