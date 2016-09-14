@@ -46,7 +46,7 @@ $('.search-reset').on('click', function(){
   }
 });
 
-$('.search-submit').on('click', function(event){
+$('.search-submit').on('click', function(){
   $results.hide();
   $results.empty();
 
@@ -81,7 +81,7 @@ $('.search-results').on('click', '.info-card', function() {
       $wt = $('<h3 class="wt"></h3>'),
       $statContain = $('<div class="stat-container">');
       pId = '',
-      pName = '',
+      pName = ($(this).find($('.info-name')).text()),
       pHt = '',
       pWt = '',
       pStats = {
@@ -106,7 +106,6 @@ $('.search-results').on('click', '.info-card', function() {
       success: function(result){
         console.log(result);
         pId = result.id;
-        pName = result.name;
         pHt = (result.height) / 10;
         pWt = (result.weight) / 10;
         pStats.speed = result.stats[0].base_stat;
