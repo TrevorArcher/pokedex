@@ -24,7 +24,7 @@ Request.prototype.call = function() {
     res.on("end", function () {
       var body = Buffer.concat(chunks);
       console.log(body.toString());
-      fs.writeFile('pokemon/' + that.id + '.json', body, (err) => {
+      fs.writeFile('sample/' + that.id + '.json', body, (err) => {
         if (err) throw err;
         console.log('It\'s saved!');
       });
@@ -33,7 +33,7 @@ Request.prototype.call = function() {
   req.end();
 };
 
-var herpArr = [251,721,301,351]
-for (var i = 0 ; i < herpArr.length ; i++) {
-  new Request(herpArr[i]).call();
+
+for (var i = 0 ; i < 50 ; i++) {
+  new Request(i).call();
 }
