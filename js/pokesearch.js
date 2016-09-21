@@ -53,7 +53,7 @@ $('.search-submit').on('click', function(){
   for(var i = 0 ; i < pObj.pokemon.length ; i++) {
     var nextP = pObj.pokemon[i],
     pName = nextP.name,
-    $cardDiv = $('<div class="info-card" tabindex="0" value=' + nextP.id + '>'),
+    $cardDiv = $('<button class="info-card" value=' + nextP.id + '>'),
     $nameDiv = $('<div class="info-name">'),
     $imgDiv = $('<div class="info-img">'),
     $typeDiv = $('<div class="type-container">');
@@ -75,12 +75,12 @@ $('.search-submit').on('click', function(){
 });
 
 //figure out proper keypress
-$('.search-results').on('click keypress', '.info-card', function() {
+$('.search-results').on('click', '.info-card', function() {
   var $infoText = $('<div class="info-text">'),
       $htWt = $('<div class="ht-wt">'),
       $ht = $('<h3 class="ht"></h3>'),
       $wt = $('<h3 class="wt"></h3>'),
-      $statContain = $('<div class="stat-container">');
+      $statContain = $('<div class="stat-container">'),
       pId = '',
       pName = ($(this).find($('.info-name')).text()),
       pHt = '',
